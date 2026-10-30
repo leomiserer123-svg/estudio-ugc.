@@ -1,0 +1,22 @@
+AVISO DE ACESSO POR E-MAIL (Gmail)
+
+O app pede nome e Gmail de quem entra e envia isso para o seu e-mail.
+Isso não confirma que a pessoa é dona do Gmail digitado. Serve para controle.
+
+Para ativar:
+1. Abra script.google.com e crie um projeto novo.
+2. Cole o conteúdo do arquivo apps-script-registro.gs.
+3. Troque 'troque-por-uma-senha-sua' por uma senha sua.
+4. Toque em Implantar > Nova implantação > Tipo: App da Web.
+   Executar como: Eu. Quem tem acesso: Qualquer pessoa.
+   Autorize quando o Google pedir.
+5. Copie o endereço que termina em /exec.
+6. No GitHub, abra app/src/main/assets/config.js e preencha:
+   adminUrl com o endereço copiado
+   token com a mesma senha do passo 3
+7. Gere o APK de novo (Actions > Gerar APK > Run workflow).
+
+Enquanto adminUrl estiver vazio, o app não envia nada. Os acessos ficam
+guardados no celular de quem entrou e só são enviados quando essa pessoa
+abrir uma versão do app que já tenha o endereço preenchido.
+Por isso, preencha o config.js antes de passar o APK para outras pessoas.
